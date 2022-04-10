@@ -60,6 +60,7 @@ let flag = document.querySelector('img');
           }else if(Object.values(data[0].languages).length >=6){
             language.innerText = Object.values(data[0].languages)
             language.style.fontSize = '1.5rem'
+            language.style.lineHeight = '3rem'
             
           }else{
           language.innerText = Object.values(data[0].languages)
