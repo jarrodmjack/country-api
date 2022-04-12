@@ -10,6 +10,8 @@ let population = document.querySelector('#popDisplay')
 let language = document.querySelector('#nativeLangDisplay')
 let unMem = document.querySelector('#unMemDisplay')
 let currency = document.querySelector('#currencyDisplay')
+let timezone = document.querySelector('#timezoneDisplay')
+let borders = document.querySelector('#bordersDisplay')
 let flag = document.querySelector('img');
 
 
@@ -34,9 +36,11 @@ let flag = document.querySelector('img');
         .then(res => res.json()) // parse response as JSON
         .then(data => {
           console.log(data) 
-          console.log(data[0].flags) //flag
+          // console.log(data[0].population)
+          // console.log(Number(data[0].population).toLocaleString())
+          // console.log(data[0].flags) //flag
           // console.log(data[0].languages)
-          console.log(Object.values(data[0].languages))
+          // console.log(Object.values(data[0].languages))
           // console.log(data[0].name.official)
           
           // CURRENY INFO
@@ -45,12 +49,23 @@ let flag = document.querySelector('img');
           console.log(Array.from(Object.values(currency1[0])))
           let currencyFinal = Array.from(Object.values(currency1[0]))
           currency.innerText = currencyFinal[0]
+          
 
-
+          
           country.innerText = data[0].name.official
           capital.innerText = data[0].capital //capital city
           region.innerText = data[0].region //region
-          population.innerText = data[0].population // population
+          population.innerText = Number(data[0].population).toLocaleString() // population
+          
+
+          // timezone
+          if(data[0].timezones.length > 2){
+            timezone.innerText = data[0].timezones
+            timezone.style.fontSize = '2rem'
+            timezone.style.padding = '2rem'
+          }else{
+            timezone.innerText = data[0].timezones
+          }
 
 
           // language
@@ -74,12 +89,17 @@ let flag = document.querySelector('img');
             unMem.innerText = 'No'
           }
           
-          // currency.innerText = Object.values(data[0].currencies)
-          // if(data[0].currenc.length > 5){
-            // currency.innerText = data[0].currencies
-          // }else{
-            // currency.innerText = data[0].currencies //currency
-          // }
+          
+          // borders
+          if(data[0].borders.length > 3){
+            borders.innerText = data[0].borders
+            borders.style.fontSize = '2.5rem'
+            borders.style.padding = '2rem'
+            borders.innerText = data[0].borders.join(', ')
+          }else{
+            borders.innerText = data[0].borders
+
+          }
          
           
 

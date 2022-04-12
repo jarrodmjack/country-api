@@ -121,12 +121,16 @@ img{
 
 .infoContainer1,
 .infoContainer2,
-.infoContainer3{
+.infoContainer3,
+.infoContainer4{
     display: flex;
     gap: 20px;
 }
 
-.infoBlock1{
+.infoBlock1,
+.infoBlock2,
+.infoBlock3,
+.infoBlock4{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -140,7 +144,7 @@ img{
     border-radius: 10px;
 }
 
-.infoBlock2{
+/* .infoBlock2{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -167,6 +171,19 @@ background-color: #C8CCCA;
 border: 5px solid black;
 border-radius: 10px;
 }
+.infoBlock4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid red;
+    height: 200px;
+    width: 600px;
+align-self: center;
+background-color: #C8CCCA;
+border: 5px solid black;
+border-radius: 10px;
+} */
 
 h3.contentHeading{
     font-weight: bold;
@@ -182,4 +199,68 @@ h4.displayInfo{
 
 .displayInfo{
  text-align: center;   
+}
+
+
+
+/* Media queries */
+
+
+@media all and (max-width: 1230px){
+    .mainContent {
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+    .infoContainer1,
+    .infoContainer2,
+    .infoContainer3,
+    .infoContainer4{
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+
+}
+
+
+@media all and (max-width:585px){
+
+    #countryInput{
+        width: 350px;
+        border-radius: 0;
+    }
+
+    #search{
+        border-radius: 0;
+    }
+
+    .inputContainer{
+        flex-direction: column;
+    }
+
+
+    h2{
+        text-align: center;
+    }
+    .flagContainer{
+        width: 375px;
+    }
+    div.flagContainer img{
+        width: 100%;
+
+    }
+    header{
+        text-align: center;
+    }
+
+}
+
+
+@media all and (max-width: 501px){
+
+    #capitalDisplay{
+        font-size: 2.9rem;
+    }
+
 }
