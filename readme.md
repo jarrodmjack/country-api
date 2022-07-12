@@ -1,17 +1,36 @@
-Country Information Database
+
+<hr>
+
+<p align="center" width="100%">
+    <img src='https://conceptdraw.com/a2272c3/p1/preview/640/pict--europe-state-flags-clip-art-design-elements-european-country-flags'></img>
+</p>
+
+
+<hr>
+
+<b><h1>Country Information Database</h1><b>
+
+
+
+
 
 I created this application utilizing the REST countries API. The user will enter a country name and the application will return information about the country.
+
+
+
 
 Link to project: https://countryinfodb.netlify.app
 
 
+
+
 How It's Made:
-Tech used: HTML, CSS, JavaScrip
+Tech used: HTML, CSS, JavaScript
+
+
 
 I started out with my HTML and CSS and adjusted the layout to have 8 blocks where information would be displayed. Using the REST API, I was able to get a bunch of information about countries and display that information to the user. I used vanilla JS for this project.
 
-Lessons Learned:
-No matter what your experience level, being an engineer means continuously learning. Every time you build something you always have those whoa this is awesome or fuck yeah I did it! moments. This is where you should share those moments! Recruiters and interviewers love to see that you're self-aware and passionate about growing.
 
 
 Also check out a couple of my other projects: 
