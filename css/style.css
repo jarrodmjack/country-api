@@ -11,7 +11,7 @@ html{
 }
 
 body{
-background-color: #7D98A1;
+background-color: #8caae3;
 font-size: 3rem;
 font-family: sans-serif;
 }
@@ -139,7 +139,7 @@ img{
     height: 200px;
     width: 600px;
     align-self: center;
-    background-color: #C8CCCA;
+    background-color: #feffff;
     border: 5px solid black;
     border-radius: 10px;
 }
@@ -191,7 +191,7 @@ h3.contentHeading{
 }
 
 h4.displayInfo{
-    color: rgb(69, 126, 186);
+    color: rgb(35, 35, 35);
     font-size: 3.3rem;
 }
 
